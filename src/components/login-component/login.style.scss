@@ -1,0 +1,50 @@
+.login-page-style {
+  min-height: 100vh;
+  min-width: 1000px;
+  .sign-in-email-style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    .succes-style {
+      height: 20px;
+      margin-top: 5px;
+      font-size: 12px;
+      font-weight: bold;
+      color: green;
+    }
+    .sign-in-style {
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      p {
+        margin: 0px;
+      }
+      input {
+        padding: 10px;
+        border: 1px solid rgb(186, 186, 186);
+        border-radius: 5px 0px 0px 5px;
+        width: 60%;
+        max-height: 50px;
+      }
+      .send-email-button {
+        border-radius: 0px 5px 5px 0px;
+        background-color: #2098d9;
+        color: white;
+        border: none;
+        width: 90px;
+        height: 47px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .not-registered-error {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+}
