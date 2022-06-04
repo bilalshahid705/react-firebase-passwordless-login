@@ -1,5 +1,5 @@
 import firebase from "./firebase/firebaseConfig";
-import LoginComponent from "./components/login-component/login-component.jsx";
+import LoginComponent from "./pages/login-page/login-page.jsx";
 
 const App = () => {
   return (
