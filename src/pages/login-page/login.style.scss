@@ -1,10 +1,8 @@
 .sign-in-email-style {
-  min-height: 100vh;
-  min-width: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
   .succes-style {
     height: 20px;
@@ -13,23 +11,29 @@
     font-weight: bold;
     color: green;
   }
+
   .sign-in-style {
+    min-height: 25vh;
     width: 40%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    h3 {
+      margin: 0;
+    }
     p {
       margin: 0px;
     }
     input {
       padding: 10px;
       border: 1px solid rgb(186, 186, 186);
-      border-radius: 5px 0px 0px 5px;
-      width: 60%;
+      border-radius: 5px 5px;
+      width: 80%;
       max-height: 50px;
     }
     .send-email-button {
-      border-radius: 0px 5px 5px 0px;
-      background-color: #2098d9;
+      border-radius: 5px 5px;
+      background-color: #04bb84;
       color: white;
       border: none;
       width: 90px;

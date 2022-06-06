@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import firebase from "../../firebase/firebaseConfig";
 import { emailValidation } from "../../utils/emailValidations";
 import SmallLoader from "../../components/small-loader/small-loader.component";
 import "./login.style.scss";
 
-const LoginComponent = () => {
+const LoginPage = () => {
   const [errMessage, setErrMessage] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState({ email: "" });
   const [emailSuccess, setEmailSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [isAuth, setIsAuth] = useState(false);
 
   const handleChange = (e) => {
     setEmail(e.target.value);
@@ -43,33 +42,13 @@ const LoginComponent = () => {
     }
   };
 
-  useEffect(() => {
-    const savedEmail = window.localStorage.getItem("emailForSignIn");
-    if (
-      firebase.auth().isSignInWithEmailLink(window.location.href) &&
-      !!savedEmail
-    ) {
-      firebase
-        .auth()
-        .signInWithEmailLink(savedEmail, window.location.href)
-        .then(() => {
-          window.localStorage.removeItem("emailForSignIn");
-        })
-        .then(setIsAuth(true))
-        .catch((error) => {
-          console.log(error);
-        });
-    }
-  }, []);
-
   return (
     <div className="sign-in-email-style">
-      <h3>PasswordLess Login</h3>
-      <br />
       <form
         className="sign-in-style"
         onSubmit={(e) => passwordLessEmailAuth(e)}
       >
+        <h3>Login</h3>
         <input
           type="text"
           name="email"
@@ -100,4 +79,4 @@ const LoginComponent = () => {
   );
 };
 
-export default LoginComponent;
+export default LoginPage;
