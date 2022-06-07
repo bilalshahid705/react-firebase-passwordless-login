@@ -3,9 +3,6 @@ import { Route, Navigate, Routes } from "react-router-dom";
 
 const PrivateRoute = ({ element: Component, ...rest }) => {
   const { isUserAuth } = useSelector((state) => state.users);
-  console.log("isUserAuth", isUserAuth);
-  console.log("rest", rest);
-  console.log("Component", Component);
 
   return (
     <Routes>
